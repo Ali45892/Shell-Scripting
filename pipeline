@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git branch: 'main', credentialsId: 'a7d3ae6b-c09d-46c7-92f1-c72bbe12eda3', url: 'https://github.com/Ali45892/JenkinsPipelineDemo.git'
+            }
+        }
+    }
+}
